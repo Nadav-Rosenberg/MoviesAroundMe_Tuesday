@@ -1,0 +1,3 @@
+moviesAroundMe.controller('MoviesAroundMeController', [function() {
+
+}]);
