@@ -27,6 +27,9 @@ describe('MoviesAroundMeController', function() {
     ];
 
     it('displays search results', function() {
+      ctrl.postCode = 'SW7';
+      ctrl.distance = '2';
+      ctrl.doSearch();
       expect(ctrl.searchResult.items).toEqual(items);
     });
   });

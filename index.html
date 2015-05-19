@@ -17,7 +17,7 @@
       <form class="form-horizontal">
         Postcode: <input type="text" name="postcode">
         Distance: <input type="text" name="distance">
-        <button class="btn">Search</button>
+        <button class="btn" ng-click="searchCtrl.doSearch()">Search</button>
       </form>
 
       <ul class="list-group" ng-repeat="movie in searchCtrl.searchResult.items">
