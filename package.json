@@ -1,0 +1,26 @@
+{
+  "name": "MoviesAroundMe_Tuesday",
+  "version": "1.0.0",
+  "description": "Tuesday stab at the projet. Nadav & Sammy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nadav-Rosenberg/MoviesAroundMe_Tuesday.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nadav-Rosenberg/MoviesAroundMe_Tuesday/issues"
+  },
+  "homepage": "https://github.com/Nadav-Rosenberg/MoviesAroundMe_Tuesday",
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}
