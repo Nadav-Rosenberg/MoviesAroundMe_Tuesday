@@ -17,11 +17,11 @@ describe('MoviesAroundMeController', function() {
 
     var items = [
       {
-        "movie": "Movie #1",
+        "title": "Movie #1",
         "distance": "1.1"
       }, 
       {
-        "movie": "Movie #2",
+        "title": "Movie #2",
         "distance": "2.2"
       }
     ];

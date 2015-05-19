@@ -11,7 +11,7 @@
     <script src="js/moviesAroundMeController.js"></script>
   </head>
 
-  <body ng-controller="MoviesAroundMeController as listCtrl">
+  <body ng-controller="MoviesAroundMeController as searchCtrl">
     <div>
       
       <form class="form-horizontal">
@@ -20,14 +20,10 @@
         <button class="btn">Search</button>
       </form>
 
-      <ul class="list-group">
+      <ul class="list-group" ng-repeat="movie in searchCtrl.searchResult.items">
 
         <li class="list-group-item">
-			<p>Movie #1</p><p>Distance #1</p>
-        </li>
-
-        <li class="list-group-item">
-          <p>Movie #2</p><p>Distance #2</p>
+			<p>Title: {{movie.title}}</p><p>Distance: {{movie.distance}}</p>
         </li>
 
       </ul>
