@@ -1,0 +1,1 @@
+var moviesAroundMe = angular.module('MoviesAroundMe', ['ngResource']);
