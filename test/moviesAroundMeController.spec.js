@@ -14,7 +14,6 @@ describe('MoviesAroundMeController', function() {
   });
 
   describe('when searching for movies', function() {
-
     var items = [
       {
         "title": "Movie #1",
@@ -26,11 +25,22 @@ describe('MoviesAroundMeController', function() {
       }
     ];
 
+    var httpBackend;
+    beforeEach(inject(function($httpBackend) {
+      httpBackend = $httpBackend
+      httpBackend
+        .when("GET", "http://www.moviesapi.herokuapp.com/cinemas/find/SW7")
+        .respond(
+          { items: items }
+        );
+    }));
+
     it('displays search results', function() {
       ctrl.postCode = 'SW7';
       ctrl.distance = '2';
       ctrl.doSearch();
-      expect(ctrl.searchResult).toEqual(items);
+      httpBackend.flush();
+      expect(ctrl.searchResult.items).toEqual(items);
     });
   });
 

@@ -2,13 +2,10 @@ moviesAroundMe.controller('MoviesAroundMeController', ['$resource', function($re
 
   var self = this;
 
-  var searchResource = $resource('http://moviesapi.herokuapp.com/cinemas/find/SW7')
+  var searchResource = $resource('http://www.moviesapi.herokuapp.com/cinemas/find/SW7')
 
   self.doSearch = function() {
-  	searchResource.get().success(function() {	
-  	}).then(function(response) {
-  		self.searchResult = response.data;
-  	});
+  	self.searchResult = searchResource.get();
   };
 
 }]);
