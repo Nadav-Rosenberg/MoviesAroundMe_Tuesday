@@ -8,9 +8,27 @@ describe('MoviesAroundMeController', function() {
   }));
 
   it('initialises with an empty movie list, post & distance', function() {
-  	expect(ctrl.movieList).toBeUndefined();
+  	expect(ctrl.searchResult).toBeUndefined();
   	expect(ctrl.postCode).toBeUndefined();
   	expect(ctrl.distance).toBeUndefined();
+  });
+
+  describe('when searching for movies', function() {
+
+    var items = [
+      {
+        "movie": "Movie #1",
+        "distance": "1.1"
+      }, 
+      {
+        "movie": "Movie #2",
+        "distance": "2.2"
+      }
+    ];
+
+    it('displays search results', function() {
+      expect(ctrl.searchResult.items).toEqual(items);
+    });
   });
 
 });
