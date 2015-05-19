@@ -15,8 +15,8 @@
     <div>
       
       <form class="form-horizontal">
-        Postcode: <input type="text" name="postcode">
-        Distance: <input type="text" name="distance">
+        Postcode: <input type="text" name="postcode" ng-model="searchCtrl.postCode">
+        Distance: <input type="text" name="distance" ng-model="searchCtrl.distance">
         <button class="btn" ng-click="searchCtrl.doSearch()">Search</button>
       </form>
 
